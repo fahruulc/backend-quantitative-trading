@@ -1,0 +1,88 @@
+from fastapi import APIRouter, HTTPException, Request
+from fastapi_cache.decorator import cache
+from app.schemas.macro import MacroData
+from app.schemas.sector import SectorData
+from app.schemas.stock import StockPicksData
+from app.schemas.report import ConsolidatedReportResponse
+from app.services.phase1_macro import MacroGlobalSensorService
+from app.services.phase2_sector import SectorSelectorProfessionalService
+from app.services.phase3_picker import Phase3HybridSystem
+from app.services.phase4_execution import ExecutionSniperProService
+
+router = APIRouter()
+macro_service = MacroGlobalSensorService()
+sector_service = SectorSelectorProfessionalService()
+picker_service = Phase3HybridSystem()
+execution_service = ExecutionSniperProService()
+
+@router.get("/macro", response_model=MacroData)
+@cache(expire=3600)
+async def get_macro_analysis(request: Request):
+    """
+    Endpoint untuk menjalankan analisis sentimen makro global (Fase 1).
+    Mengambil data dari YFinance secara real-time dan menganalisis regime market saat ini.
+    """
+    try:
+        macro_data = await macro_service.run()
+        return macro_data
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Macro Analysis Error: {str(e)}")
+
+@router.get("/sectors")
+@cache(expire=3600)
+async def get_sector_analysis(request: Request):
+    """
+    Endpoint untuk menjalankan Fase 1 dan dilanjutkan Fase 2 (Rotasi Sektor).
+    """
+    try:
+        macro_data = await macro_service.run()
+        sector_data = sector_service.run(macro_data)
+        
+        return {
+            "macro_data": macro_data,
+            "sector_data": sector_data
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Sector Analysis Error: {str(e)}")
+
+@router.get("/stocks", response_model=StockPicksData)
+@cache(expire=3600)
+async def get_stock_picks(request: Request):
+    """
+    Endpoint untuk menjalankan Fase 1, Fase 2, dan Fase 3 (Intelligent Stock Picker).
+    Menggunakan Gemini dan Sectors API secara paralel.
+    """
+    try:
+        macro_data = await macro_service.run()
+        sector_data = sector_service.run(macro_data)
+        stock_picks = await picker_service.run(macro_data, sector_data)
+        
+        return stock_picks
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Stock Picker Error: {str(e)}")
+
+@router.get("/full-report", response_model=ConsolidatedReportResponse)
+@cache(expire=3600)  # Cached di Redis selama 1 Jam
+async def get_full_report(request: Request):
+    """
+    Endpoint UTAMA: Menggabungkan Fase 1 hingga Fase 4.
+    Menggunakan Redis Caching. Hasil akan ditarik dari Redis jika direquest kurang dari 1 jam sejak run terakhir.
+    """
+    try:
+        # Menjalankan orkestrasi Fase 1 hingga 4
+        macro_data = await macro_service.run()
+        sector_data = sector_service.run(macro_data)
+        stock_picks = await picker_service.run(macro_data, sector_data)
+        signals = await execution_service.run(stock_picks)
+        
+        return ConsolidatedReportResponse(
+            timestamp=macro_data.timestamp,
+            macro_status=macro_data.status,
+            macro_reasoning=macro_data.reasoning,
+            top_sector=sector_data.top_sector,
+            ai_insight=stock_picks.insight,
+            signals=signals
+        )
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Consolidated Report Error: {str(e)}")
+
