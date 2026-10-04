@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    html,
+    body {
+        @apply bg-finbase text-gray-300 antialiased;
+        font-family: 'Inter', sans-serif;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+}
+
+@layer components {
+    .metric-card {
+        @apply bg-fincard border border-finborder rounded-xl p-4 hover:border-gray-600 transition-all duration-200;
+    }
+
+    .badge-buy {
+        @apply bg-fingreen/20 text-fingreen border border-fingreen/40 text-xs font-bold px-2.5 py-1 rounded uppercase tracking-widest;
+    }
+
+    .badge-wait {
+        @apply bg-gray-700/50 text-gray-400 border border-gray-600/50 text-xs font-bold px-2.5 py-1 rounded uppercase tracking-widest;
+    }
+
+    .tag-chip {
+        @apply text-[10px] text-gray-500 uppercase tracking-wider mt-1 block;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0B0E14;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1E2736;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2A3A52;
+}

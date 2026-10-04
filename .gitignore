@@ -45,3 +45,7 @@ dump.rdb
 
 # Jupyter Notebook
 .ipynb_checkpoints
+
+
+# Claude configuration 
+.claude
