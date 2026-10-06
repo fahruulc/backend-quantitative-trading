@@ -1,4 +1,4 @@
-from sqlalchemy import Column, String, Float, Integer, DateTime, Boolean, JSON
+from sqlalchemy import Column, String, Float, Integer, DateTime, Boolean, JSON, Text
 from sqlalchemy.sql import func
 from app.core.database import Base
 
@@ -32,7 +32,15 @@ class StockFundamental(Base):
     whale_count = Column(Integer, nullable=True)
     conglomerate_count = Column(Integer, nullable=True)
 
+    # AI Processing Tracking (NEW)
+    ai_processed = Column(Boolean, default=False, nullable=False)
+    ai_model_used = Column(String(50), nullable=True)
+    ai_insight = Column(Text, nullable=True)
+    ai_processed_at = Column(DateTime(timezone=True), nullable=True)
+    ai_error = Column(Text, nullable=True)
+
     # Metadata
+    sectors_fetched_at = Column(DateTime(timezone=True), nullable=True)
     last_updated = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
     data_source = Column(String(20), default="SECTORS_API")  # SECTORS_API | YFINANCE | MANUAL
 
@@ -57,6 +65,12 @@ class StockFundamental(Base):
             "institutional_flow": self.institutional_flow,
             "whale_count": self.whale_count,
             "conglomerate_count": self.conglomerate_count,
+            "ai_processed": self.ai_processed,
+            "ai_model_used": self.ai_model_used,
+            "ai_insight": self.ai_insight,
+            "ai_processed_at": self.ai_processed_at.isoformat() if self.ai_processed_at else None,
+            "ai_error": self.ai_error,
+            "sectors_fetched_at": self.sectors_fetched_at.isoformat() if self.sectors_fetched_at else None,
             "last_updated": self.last_updated.isoformat() if self.last_updated else None,
             "data_source": self.data_source
         }

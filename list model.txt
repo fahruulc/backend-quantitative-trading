@@ -1,0 +1,14 @@
+// konfigrasi router
+    "ANTHROPIC_BASE_URL": "https://router.octalabs.id",
+    "ANTHROPIC_AUTH_TOKEN": "octa-b9dc4eec136d4025f42782b2d2e7fce0",
+    "ANTHROPIC_MODEL": "claude-opus-5-5",
+
+// list model yang digunakan : (silahkan otomatis ganti jika gagal / error)
+qwen3.8-max
+minimax-m3-pay
+kimi-k3
+mimo-v2.5
+mimo-v2.6-flash
+deepseek-v4.1
+minimax-m3
+claude-sonnet-5
