@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
 import { marketAPI } from '../services/api'
+import api from '../services/api'
 
 export const useMarketStore = defineStore('market', {
   state: () => ({
@@ -19,7 +20,10 @@ export const useMarketStore = defineStore('market', {
     lastUpdated: null,
 
     // Demo Mode
-    demoMode: false
+    demoMode: false,
+
+    // API Client (exposed for components)
+    api: api
   }),
 
   getters: {

@@ -26,6 +26,9 @@ app = FastAPI(
 origins = [
     "http://localhost:3000",      # Frontend Vue dev server
     "http://localhost:5173",      # Vite dev server
+    "http://localhost:5174",      # Vite dev server (alt port)
+    "http://localhost:5175",      # Vite dev server (alt port)
+    "http://localhost:5180",      # Vite dev server (current)
     "http://localhost:8080",      # Alternative frontend port
     "https://your-frontend.com"   # Ganti dengan nama domain frontend produksi Anda
 ]
@@ -79,8 +82,9 @@ async def health_check():
     }
 
 # Register Routers
-from app.api.endpoints import analysis, admin
+from app.api.endpoints import analysis, admin, frontend
 
 app.include_router(analysis.router, prefix="/api/v1", tags=["Analysis"])
-app.include_router(admin.router, prefix="/api/v1", tags=["Admin"])
+app.include_router(admin.router, prefix="/api/v1/admin", tags=["Admin"])
+app.include_router(frontend.router, prefix="/api/v1/frontend", tags=["Frontend"])
 

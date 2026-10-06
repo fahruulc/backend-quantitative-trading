@@ -1,7 +1,9 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api/v1',
+  // Default: relative '/api/v1' → proxied by Vite to localhost:8000 (no CORS, port-independent).
+  // Override with VITE_API_BASE_URL env for direct backend access.
+  baseURL: import.meta.env.VITE_API_BASE_URL || '/api/v1',
   timeout: 300000,  // Increased to 2-5 minutes for first load
   headers: {
     'Content-Type': 'application/json'

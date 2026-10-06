@@ -144,12 +144,26 @@ class Phase3HybridSystem:
             )
 
             # SAVE TO DATABASE NOW (this is the critical fix!)
-            db.merge(stock_record)  # Use merge to handle updates
+            # Use add instead of merge, and handle duplicates
+            existing = db.query(StockFundamental).filter_by(ticker=ticker).first()
+            if existing:
+                # Update existing record — hanya timpa field yang punya nilai baru
+                # (Sectors API gagal mengembalikan None; jangan sampai menimpa
+                #  data valid/backfill yang sudah ada dengan NULL)
+                for key, value in stock_record.__dict__.items():
+                    if not key.startswith('_') and value is not None:
+                        setattr(existing, key, value)
+                stock_record = existing
+            else:
+                # Add new record
+                db.add(stock_record)
+
             db.commit()
             db.refresh(stock_record)
 
             # Log token usage
             await cache_manager.log_token_usage(
+                db=db,
                 endpoint="phase3_picker",
                 provider="SECTORS_API",
                 tokens_used=8,

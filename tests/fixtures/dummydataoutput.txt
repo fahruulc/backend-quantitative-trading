@@ -1,0 +1,1331 @@
+/api/v1/analysis/macro
+{
+  "timestamp": "2026-10-01 06:25:49",
+  "status": "RISK OFF (DEFENSIVE)",
+  "reasoning": "IDR Weakness (>16.5k)",
+  "usd": 17933,
+  "usd_chg": 1.11,
+  "oil": 89.64,
+  "oil_chg": -0.86,
+  "gold": 4219.7,
+  "gold_chg": 0.79,
+  "copper": 6.63,
+  "copper_chg": 1.04,
+  "yield_rate": 5.29,
+  "yield_chg": 0.72,
+  "eido": -0.85,
+  "eido_val": 11.73,
+  "btc": 84287.37,
+  "btc_chg": 0.8
+}
+
+/api/v1/analysis/sectors
+{
+  "macro_data": {
+    "timestamp": "2026-10-01 06:26:39",
+    "status": "RISK OFF (DEFENSIVE)",
+    "reasoning": "IDR Weakness (>16.5k)",
+    "usd": 17933,
+    "usd_chg": 1.11,
+    "oil": 89.63,
+    "oil_chg": -0.87,
+    "gold": 4219.7,
+    "gold_chg": 0.79,
+    "copper": 6.62,
+    "copper_chg": 1,
+    "yield_rate": 5.29,
+    "yield_chg": 0.72,
+    "eido": -0.85,
+    "eido_val": 11.73,
+    "btc": 84300.01,
+    "btc_chg": 0.81
+  },
+  "sector_data": {
+    "sorted_sectors": {
+      "IDXBASIC": 99.5,
+      "IDXENERGY": 82,
+      "IDXFINANCE": 38.4,
+      "IDXINFRA": 38,
+      "IDXTECH": 25.6,
+      "IDXNONCYC": 22.7
+    },
+    "top_sector": "IDXBASIC"
+  }
+}
+
+/api/v1/analysis/stocks
+{
+  "insight": "Record gold and copper prices paired with a strong USD strongly favor precious metal exporters over petrochemical producers.",
+  "picks": [
+    {
+      "ticker": "ANTM.JK",
+      "price": 3200,
+      "score": 85,
+      "roe": 20.42266339477243,
+      "der": 0.1290972938087195,
+      "pbv": 2.1785369187959036,
+      "is_ai": true,
+      "ai_reason": "Record gold price windfall",
+      "sectors_available": false,
+      "sectors_error": "Sectors API authentication failed (401)",
+      "sectors_score": null,
+      "sectors_valuation_score": null,
+      "sectors_growth_score": null,
+      "sectors_dividend_score": null,
+      "sectors_ownership_score": null,
+      "forward_pe": null,
+      "intrinsic_value": null,
+      "eps_growth": null,
+      "revenue_growth": null,
+      "dividend_yield": null,
+      "payout_ratio": null,
+      "institutional_flow": null,
+      "whale_count": null,
+      "conglomerate_count": null,
+      "fundamental_consensus": "SECTORS UNAVAILABLE",
+      "ai_insight": "Record gold and copper prices paired with a strong USD strongly favor precious metal exporters over petrochemical producers."
+    },
+    {
+      "ticker": "MDKA.JK",
+      "price": 2830,
+      "score": 50,
+      "roe": -7.8412938127425,
+      "der": 2.603854315623314,
+      "pbv": 87315.35527872153,
+      "is_ai": true,
+      "ai_reason": "Surging gold, copper tailwinds",
+      "sectors_available": false,
+      "sectors_error": "Sectors API authentication failed (401)",
+      "sectors_score": null,
+      "sectors_valuation_score": null,
+      "sectors_growth_score": null,
+      "sectors_dividend_score": null,
+      "sectors_ownership_score": null,
+      "forward_pe": null,
+      "intrinsic_value": null,
+      "eps_growth": null,
+      "revenue_growth": null,
+      "dividend_yield": null,
+      "payout_ratio": null,
+      "institutional_flow": null,
+      "whale_count": null,
+      "conglomerate_count": null,
+      "fundamental_consensus": "SECTORS UNAVAILABLE",
+      "ai_insight": "Record gold and copper prices paired with a strong USD strongly favor precious metal exporters over petrochemical producers."
+    },
+    {
+      "ticker": "TINS.JK",
+      "price": 4680,
+      "score": 85,
+      "roe": 15.622859279500078,
+      "der": 0.19342147076061225,
+      "pbv": 4.145325208748791,
+      "is_ai": false,
+      "ai_reason": "-",
+      "sectors_available": false,
+      "sectors_error": "Sectors API authentication failed (401)",
+      "sectors_score": null,
+      "sectors_valuation_score": null,
+      "sectors_growth_score": null,
+      "sectors_dividend_score": null,
+      "sectors_ownership_score": null,
+      "forward_pe": null,
+      "intrinsic_value": null,
+      "eps_growth": null,
+      "revenue_growth": null,
+      "dividend_yield": null,
+      "payout_ratio": null,
+      "institutional_flow": null,
+      "whale_count": null,
+      "conglomerate_count": null,
+      "fundamental_consensus": "SECTORS UNAVAILABLE",
+      "ai_insight": "Record gold and copper prices paired with a strong USD strongly favor precious metal exporters over petrochemical producers."
+    },
+    {
+      "ticker": "UNIC.JK",
+      "price": 14975,
+      "score": 75,
+      "roe": 11.852175669351949,
+      "der": 0.019016342937734344,
+      "pbv": 18397.31863937429,
+      "is_ai": false,
+      "ai_reason": "-",
+      "sectors_available": false,
+      "sectors_error": "Sectors API authentication failed (401)",
+      "sectors_score": null,
+      "sectors_valuation_score": null,
+      "sectors_growth_score": null,
+      "sectors_dividend_score": null,
+      "sectors_ownership_score": null,
+      "forward_pe": null,
+      "intrinsic_value": null,
+      "eps_growth": null,
+      "revenue_growth": null,
+      "dividend_yield": null,
+      "payout_ratio": null,
+      "institutional_flow": null,
+      "whale_count": null,
+      "conglomerate_count": null,
+      "fundamental_consensus": "SECTORS UNAVAILABLE",
+      "ai_insight": "Record gold and copper prices paired with a strong USD strongly favor precious metal exporters over petrochemical producers."
+    },
+    {
+      "ticker": "BRPT.JK",
+      "price": 1400,
+      "score": 70,
+      "roe": 21.83308846865673,
+      "der": 3.614304703184786,
+      "pbv": 58480.65508162552,
+      "is_ai": false,
+      "ai_reason": "-",
+      "sectors_available": false,
+      "sectors_error": "Sectors API authentication failed (401)",
+      "sectors_score": null,
+      "sectors_valuation_score": null,
+      "sectors_growth_score": null,
+      "sectors_dividend_score": null,
+      "sectors_ownership_score": null,
+      "forward_pe": null,
+      "intrinsic_value": null,
+      "eps_growth": null,
+      "revenue_growth": null,
+      "dividend_yield": null,
+      "payout_ratio": null,
+      "institutional_flow": null,
+      "whale_count": null,
+      "conglomerate_count": null,
+      "fundamental_consensus": "SECTORS UNAVAILABLE",
+      "ai_insight": "Record gold and copper prices paired with a strong USD strongly favor precious metal exporters over petrochemical producers."
+    },
+    {
+      "ticker": "TPIA.JK",
+      "price": 1710,
+      "score": 70,
+      "roe": 29.227733677673427,
+      "der": 1.4516739658401896,
+      "pbv": 39642.98179728586,
+      "is_ai": false,
+      "ai_reason": "-",
+      "sectors_available": false,
+      "sectors_error": "Sectors API authentication failed (401)",
+      "sectors_score": null,
+      "sectors_valuation_score": null,
+      "sectors_growth_score": null,
+      "sectors_dividend_score": null,
+      "sectors_ownership_score": null,
+      "forward_pe": null,
+      "intrinsic_value": null,
+      "eps_growth": null,
+      "revenue_growth": null,
+      "dividend_yield": null,
+      "payout_ratio": null,
+      "institutional_flow": null,
+      "whale_count": null,
+      "conglomerate_count": null,
+      "fundamental_consensus": "SECTORS UNAVAILABLE",
+      "ai_insight": "Record gold and copper prices paired with a strong USD strongly favor precious metal exporters over petrochemical producers."
+    },
+    {
+      "ticker": "INCO.JK",
+      "price": 4160,
+      "score": 65,
+      "roe": 2.7409339419893364,
+      "der": 0.001254740410713076,
+      "pbv": 15799.7487857774,
+      "is_ai": false,
+      "ai_reason": "-",
+      "sectors_available": false,
+      "sectors_error": "Sectors API authentication failed (401)",
+      "sectors_score": null,
+      "sectors_valuation_score": null,
+      "sectors_growth_score": null,
+      "sectors_dividend_score": null,
+      "sectors_ownership_score": null,
+      "forward_pe": null,
+      "intrinsic_value": null,
+      "eps_growth": null,
+      "revenue_growth": null,
+      "dividend_yield": null,
+      "payout_ratio": null,
+      "institutional_flow": null,
+      "whale_count": null,
+      "conglomerate_count": null,
+      "fundamental_consensus": "SECTORS UNAVAILABLE",
+      "ai_insight": "Record gold and copper prices paired with a strong USD strongly favor precious metal exporters over petrochemical producers."
+    },
+    {
+      "ticker": "ADMG.JK",
+      "price": 228,
+      "score": 65,
+      "roe": -2.792597846455714,
+      "der": 0.0004894753697611142,
+      "pbv": 7870.633108795332,
+      "is_ai": false,
+      "ai_reason": "-",
+      "sectors_available": false,
+      "sectors_error": "Sectors API authentication failed (401)",
+      "sectors_score": null,
+      "sectors_valuation_score": null,
+      "sectors_growth_score": null,
+      "sectors_dividend_score": null,
+      "sectors_ownership_score": null,
+      "forward_pe": null,
+      "intrinsic_value": null,
+      "eps_growth": null,
+      "revenue_growth": null,
+      "dividend_yield": null,
+      "payout_ratio": null,
+      "institutional_flow": null,
+      "whale_count": null,
+      "conglomerate_count": null,
+      "fundamental_consensus": "SECTORS UNAVAILABLE",
+      "ai_insight": "Record gold and copper prices paired with a strong USD strongly favor precious metal exporters over petrochemical producers."
+    },
+    {
+      "ticker": "FPNI.JK",
+      "price": 486,
+      "score": 65,
+      "roe": 4.151046547953764,
+      "der": 0.002577319587628866,
+      "pbv": 26410.46942361762,
+      "is_ai": false,
+      "ai_reason": "-",
+      "sectors_available": false,
+      "sectors_error": "Sectors API authentication failed (401)",
+      "sectors_score": null,
+      "sectors_valuation_score": null,
+      "sectors_growth_score": null,
+      "sectors_dividend_score": null,
+      "sectors_ownership_score": null,
+      "forward_pe": null,
+      "intrinsic_value": null,
+      "eps_growth": null,
+      "revenue_growth": null,
+      "dividend_yield": null,
+      "payout_ratio": null,
+      "institutional_flow": null,
+      "whale_count": null,
+      "conglomerate_count": null,
+      "fundamental_consensus": "SECTORS UNAVAILABLE",
+      "ai_insight": "Record gold and copper prices paired with a strong USD strongly favor precious metal exporters over petrochemical producers."
+    },
+    {
+      "ticker": "SULI.JK",
+      "price": 74,
+      "score": 60,
+      "roe": -27.02604347314987,
+      "der": 0.5576957610022584,
+      "pbv": 6818.049242565704,
+      "is_ai": false,
+      "ai_reason": "-",
+      "sectors_available": false,
+      "sectors_error": "Sectors API authentication failed (401)",
+      "sectors_score": null,
+      "sectors_valuation_score": null,
+      "sectors_growth_score": null,
+      "sectors_dividend_score": null,
+      "sectors_ownership_score": null,
+      "forward_pe": null,
+      "intrinsic_value": null,
+      "eps_growth": null,
+      "revenue_growth": null,
+      "dividend_yield": null,
+      "payout_ratio": null,
+      "institutional_flow": null,
+      "whale_count": null,
+      "conglomerate_count": null,
+      "fundamental_consensus": "SECTORS UNAVAILABLE",
+      "ai_insight": "Record gold and copper prices paired with a strong USD strongly favor precious metal exporters over petrochemical producers."
+    }
+  ]
+}
+
+/api/v1/analysis/full-report
+{
+  "timestamp": "2026-10-01 08:31:09",
+  "macro_status": "RISK OFF (DEFENSIVE)",
+  "macro_reasoning": "IDR Weakness (>16.5k)",
+  "top_sector": "IDXBASIC",
+  "ai_insight": "Surging gold and copper prices paired with a strong USD favor metal miners over margin-squeezed petrochemicals.",
+  "signals": [
+    {
+      "ticker": "ANTM.JK",
+      "price": 3160,
+      "score": 85,
+      "roe": 20.42266339477243,
+      "der": 0.1290972938087195,
+      "pbv": 2.151305207310955,
+      "is_ai": true,
+      "ai_reason": "Record gold price and USD",
+      "sectors_available": true,
+      "sectors_error": null,
+      "sectors_score": 78.3,
+      "sectors_valuation_score": 55,
+      "sectors_growth_score": null,
+      "sectors_dividend_score": 85,
+      "sectors_ownership_score": 95,
+      "forward_pe": 22.5813269945097,
+      "intrinsic_value": 2577,
+      "eps_growth": null,
+      "revenue_growth": null,
+      "dividend_yield": 6.5621457099914595,
+      "payout_ratio": 56.692055104028505,
+      "institutional_flow": [
+        {
+          "date": "2026-08-31",
+          "net_transaction": -16366274
+        },
+        {
+          "date": "2026-07-31",
+          "net_transaction": 698150214
+        },
+        {
+          "date": "2026-06-30",
+          "net_transaction": -66157564
+        },
+        {
+          "date": "2026-04-30",
+          "net_transaction": -136359752
+        },
+        {
+          "date": "2026-02-28",
+          "net_transaction": 518156454
+        },
+        {
+          "date": "2026-01-31",
+          "net_transaction": 147357396
+        },
+        {
+          "date": "2025-12-31",
+          "net_transaction": 224955696
+        },
+        {
+          "date": "2025-11-30",
+          "net_transaction": 279000770
+        },
+        {
+          "date": "2025-10-31",
+          "net_transaction": 230582840
+        },
+        {
+          "date": "2025-09-30",
+          "net_transaction": 33818466
+        },
+        {
+          "date": "2025-08-31",
+          "net_transaction": -16063620
+        },
+        {
+          "date": "2025-07-31",
+          "net_transaction": 69470594
+        },
+        {
+          "date": "2025-06-30",
+          "net_transaction": -129544308
+        },
+        {
+          "date": "2025-05-31",
+          "net_transaction": -157086366
+        },
+        {
+          "date": "2025-04-30",
+          "net_transaction": -211636822
+        },
+        {
+          "date": "2025-03-31",
+          "net_transaction": -203468868
+        },
+        {
+          "date": "2025-02-28",
+          "net_transaction": -202637732
+        },
+        {
+          "date": "2025-01-31",
+          "net_transaction": -203033394
+        },
+        {
+          "date": "2024-12-31",
+          "net_transaction": -268684530
+        },
+        {
+          "date": "2024-11-30",
+          "net_transaction": -198917380
+        },
+        {
+          "date": "2024-09-30",
+          "net_transaction": -109493444
+        },
+        {
+          "date": "2024-06-30",
+          "net_transaction": 91145186
+        },
+        {
+          "date": "2024-01-31",
+          "net_transaction": -357699841
+        },
+        {
+          "date": "2023-12-31",
+          "net_transaction": -273147261
+        }
+      ],
+      "whale_count": null,
+      "conglomerate_count": null,
+      "fundamental_consensus": "CONFIRMED",
+      "ai_insight": "Surging gold and copper prices paired with a strong USD favor metal miners over margin-squeezed petrochemicals.",
+      "action": "WAIT",
+      "tag": "DOWNTREND",
+      "ma200": 3251.759647216797,
+      "rsi": 48.86517633335562,
+      "trend": "DOWN",
+      "vol_spike": false,
+      "sl_level": 3030
+    },
+    {
+      "ticker": "MDKA.JK",
+      "price": 2820,
+      "score": 50,
+      "roe": -7.8412938127425,
+      "der": 2.603854315623314,
+      "pbv": 87006.8204544151,
+      "is_ai": true,
+      "ai_reason": "Surging gold and copper prices",
+      "sectors_available": true,
+      "sectors_error": null,
+      "sectors_score": 57.5,
+      "sectors_valuation_score": 40,
+      "sectors_growth_score": null,
+      "sectors_dividend_score": 52.5,
+      "sectors_ownership_score": 80,
+      "forward_pe": 61.3549229709877,
+      "intrinsic_value": -9249,
+      "eps_growth": null,
+      "revenue_growth": null,
+      "dividend_yield": 0.426569150553809,
+      "payout_ratio": -104.031455606712,
+      "institutional_flow": [
+        {
+          "date": "2026-02-28",
+          "net_transaction": -215866364
+        },
+        {
+          "date": "2026-01-31",
+          "net_transaction": -291530220
+        },
+        {
+          "date": "2025-12-31",
+          "net_transaction": -562592634
+        },
+        {
+          "date": "2025-11-30",
+          "net_transaction": -411702826
+        },
+        {
+          "date": "2025-10-31",
+          "net_transaction": -314267312
+        },
+        {
+          "date": "2025-09-30",
+          "net_transaction": -413413930
+        },
+        {
+          "date": "2025-08-31",
+          "net_transaction": -188820578
+        },
+        {
+          "date": "2025-07-31",
+          "net_transaction": -614085628
+        },
+        {
+          "date": "2025-06-30",
+          "net_transaction": -384568696
+        },
+        {
+          "date": "2025-05-31",
+          "net_transaction": -379572598
+        },
+        {
+          "date": "2025-04-30",
+          "net_transaction": -383108014
+        },
+        {
+          "date": "2025-03-31",
+          "net_transaction": -283483642
+        },
+        {
+          "date": "2025-02-28",
+          "net_transaction": -143487452
+        },
+        {
+          "date": "2025-01-31",
+          "net_transaction": -185969318
+        },
+        {
+          "date": "2024-12-31",
+          "net_transaction": -63599652
+        },
+        {
+          "date": "2024-11-30",
+          "net_transaction": -1593436
+        },
+        {
+          "date": "2024-09-30",
+          "net_transaction": 52493616
+        },
+        {
+          "date": "2024-06-30",
+          "net_transaction": -11250974
+        },
+        {
+          "date": "2023-12-31",
+          "net_transaction": 46971916
+        }
+      ],
+      "whale_count": 3,
+      "conglomerate_count": 3,
+      "fundamental_consensus": "CONFIRMED",
+      "ai_insight": "Surging gold and copper prices paired with a strong USD favor metal miners over margin-squeezed petrochemicals.",
+      "action": "WAIT",
+      "tag": "DOWNTREND",
+      "ma200": 2898.425435791016,
+      "rsi": 43.44247704417692,
+      "trend": "DOWN",
+      "vol_spike": false,
+      "sl_level": 2780
+    },
+    {
+      "ticker": "TINS.JK",
+      "price": 4620,
+      "score": 85,
+      "roe": 15.622859279500078,
+      "der": 0.19342147076061225,
+      "pbv": 4.092180013764833,
+      "is_ai": false,
+      "ai_reason": "-",
+      "sectors_available": true,
+      "sectors_error": null,
+      "sectors_score": 70,
+      "sectors_valuation_score": 55,
+      "sectors_growth_score": null,
+      "sectors_dividend_score": 60,
+      "sectors_ownership_score": 95,
+      "forward_pe": 24.8862715981068,
+      "intrinsic_value": 3558,
+      "eps_growth": null,
+      "revenue_growth": null,
+      "dividend_yield": 1.8965376987252198,
+      "payout_ratio": 17.6171538167455,
+      "institutional_flow": [
+        {
+          "date": "2026-02-28",
+          "net_transaction": 35961336
+        },
+        {
+          "date": "2026-01-31",
+          "net_transaction": -7478272
+        },
+        {
+          "date": "2025-12-31",
+          "net_transaction": 12873018
+        },
+        {
+          "date": "2025-11-30",
+          "net_transaction": -4668464
+        },
+        {
+          "date": "2025-10-31",
+          "net_transaction": 1965324
+        },
+        {
+          "date": "2025-09-30",
+          "net_transaction": 5570644
+        },
+        {
+          "date": "2025-08-31",
+          "net_transaction": 1023364
+        },
+        {
+          "date": "2025-07-31",
+          "net_transaction": -53141926
+        },
+        {
+          "date": "2025-06-30",
+          "net_transaction": 1453810
+        },
+        {
+          "date": "2025-05-31",
+          "net_transaction": -2410746
+        },
+        {
+          "date": "2025-04-30",
+          "net_transaction": -9587720
+        },
+        {
+          "date": "2025-03-31",
+          "net_transaction": -2502960
+        },
+        {
+          "date": "2025-02-28",
+          "net_transaction": 9319882
+        },
+        {
+          "date": "2025-01-31",
+          "net_transaction": 1771532
+        },
+        {
+          "date": "2024-12-31",
+          "net_transaction": -26785828
+        },
+        {
+          "date": "2024-11-30",
+          "net_transaction": 67136424
+        },
+        {
+          "date": "2024-09-30",
+          "net_transaction": -5881964
+        },
+        {
+          "date": "2024-06-30",
+          "net_transaction": -23923910
+        },
+        {
+          "date": "2024-01-31",
+          "net_transaction": -85408637
+        },
+        {
+          "date": "2023-12-31",
+          "net_transaction": -97047725
+        }
+      ],
+      "whale_count": null,
+      "conglomerate_count": null,
+      "fundamental_consensus": "MILD DIVERGENCE",
+      "ai_insight": "Surging gold and copper prices paired with a strong USD favor metal miners over margin-squeezed petrochemicals.",
+      "action": "BUY",
+      "tag": "MOMENTUM",
+      "ma200": 3633.8815649414064,
+      "rsi": 54.84045654935144,
+      "trend": "UP",
+      "vol_spike": false,
+      "sl_level": 4110
+    },
+    {
+      "ticker": "UNIC.JK",
+      "price": 14975,
+      "score": 75,
+      "roe": 11.852175669351949,
+      "der": 0.019016342937734344,
+      "pbv": 18397.31863937429,
+      "is_ai": false,
+      "ai_reason": "-",
+      "sectors_available": true,
+      "sectors_error": null,
+      "sectors_score": 81.7,
+      "sectors_valuation_score": null,
+      "sectors_growth_score": null,
+      "sectors_dividend_score": 90,
+      "sectors_ownership_score": 73.3,
+      "forward_pe": null,
+      "intrinsic_value": 56958,
+      "eps_growth": null,
+      "revenue_growth": null,
+      "dividend_yield": 11.061564059900201,
+      "payout_ratio": 66.0304435130737,
+      "institutional_flow": [
+        {
+          "date": "2026-02-28",
+          "net_transaction": 814
+        },
+        {
+          "date": "2026-01-31",
+          "net_transaction": 10
+        },
+        {
+          "date": "2025-12-31",
+          "net_transaction": 984
+        },
+        {
+          "date": "2025-11-30",
+          "net_transaction": 106
+        },
+        {
+          "date": "2025-10-31",
+          "net_transaction": 122
+        },
+        {
+          "date": "2025-09-30",
+          "net_transaction": 176
+        },
+        {
+          "date": "2025-08-31",
+          "net_transaction": 28
+        },
+        {
+          "date": "2025-07-31",
+          "net_transaction": 124
+        },
+        {
+          "date": "2025-06-30",
+          "net_transaction": 146
+        },
+        {
+          "date": "2025-05-31",
+          "net_transaction": -34
+        },
+        {
+          "date": "2025-04-30",
+          "net_transaction": 152
+        },
+        {
+          "date": "2025-03-31",
+          "net_transaction": 210
+        },
+        {
+          "date": "2025-02-28",
+          "net_transaction": 66
+        },
+        {
+          "date": "2025-01-31",
+          "net_transaction": 70
+        },
+        {
+          "date": "2024-12-31",
+          "net_transaction": 2
+        },
+        {
+          "date": "2024-11-30",
+          "net_transaction": 160
+        },
+        {
+          "date": "2024-09-30",
+          "net_transaction": -90
+        },
+        {
+          "date": "2024-06-30",
+          "net_transaction": 160
+        },
+        {
+          "date": "2024-01-31",
+          "net_transaction": -97
+        }
+      ],
+      "whale_count": 1,
+      "conglomerate_count": 1,
+      "fundamental_consensus": "CONFIRMED",
+      "ai_insight": "Surging gold and copper prices paired with a strong USD favor metal miners over margin-squeezed petrochemicals.",
+      "action": "BUY",
+      "tag": "MOMENTUM",
+      "ma200": 11544.8367578125,
+      "rsi": 50.64053975661733,
+      "trend": "UP",
+      "vol_spike": false,
+      "sl_level": 14775
+    },
+    {
+      "ticker": "BRPT.JK",
+      "price": 1410,
+      "score": 70,
+      "roe": 21.83308846865673,
+      "der": 3.614304703184786,
+      "pbv": 58898.374046494275,
+      "is_ai": false,
+      "ai_reason": "-",
+      "sectors_available": true,
+      "sectors_error": null,
+      "sectors_score": 62.9,
+      "sectors_valuation_score": null,
+      "sectors_growth_score": null,
+      "sectors_dividend_score": 52.5,
+      "sectors_ownership_score": 73.3,
+      "forward_pe": null,
+      "intrinsic_value": -4438,
+      "eps_growth": null,
+      "revenue_growth": null,
+      "dividend_yield": 0.116014234536059,
+      "payout_ratio": 6.14281978185535,
+      "institutional_flow": [
+        {
+          "date": "2026-08-31",
+          "net_transaction": 235793360
+        },
+        {
+          "date": "2026-07-31",
+          "net_transaction": 90300314
+        },
+        {
+          "date": "2026-06-30",
+          "net_transaction": 250124938
+        },
+        {
+          "date": "2026-04-30",
+          "net_transaction": 204383798
+        },
+        {
+          "date": "2026-02-28",
+          "net_transaction": -38536596
+        },
+        {
+          "date": "2026-01-31",
+          "net_transaction": -149684566
+        },
+        {
+          "date": "2025-12-31",
+          "net_transaction": -68687048
+        },
+        {
+          "date": "2025-11-30",
+          "net_transaction": -51071580
+        },
+        {
+          "date": "2025-10-31",
+          "net_transaction": -39773828
+        },
+        {
+          "date": "2025-09-30",
+          "net_transaction": -104759102
+        },
+        {
+          "date": "2025-08-31",
+          "net_transaction": -141093326
+        },
+        {
+          "date": "2025-07-31",
+          "net_transaction": -437950000
+        },
+        {
+          "date": "2025-06-30",
+          "net_transaction": -89645734
+        },
+        {
+          "date": "2025-05-31",
+          "net_transaction": -74828412
+        },
+        {
+          "date": "2025-04-30",
+          "net_transaction": -24129090
+        },
+        {
+          "date": "2025-03-31",
+          "net_transaction": -157667594
+        },
+        {
+          "date": "2025-02-28",
+          "net_transaction": -156842592
+        },
+        {
+          "date": "2025-01-31",
+          "net_transaction": -207842626
+        },
+        {
+          "date": "2024-12-31",
+          "net_transaction": -146383796
+        },
+        {
+          "date": "2024-11-30",
+          "net_transaction": -78891246
+        },
+        {
+          "date": "2024-09-30",
+          "net_transaction": -91784196
+        },
+        {
+          "date": "2024-06-30",
+          "net_transaction": -31932356
+        },
+        {
+          "date": "2024-01-31",
+          "net_transaction": -78783768
+        },
+        {
+          "date": "2023-12-31",
+          "net_transaction": -72226542
+        }
+      ],
+      "whale_count": 1,
+      "conglomerate_count": 1,
+      "fundamental_consensus": "CONFIRMED",
+      "ai_insight": "Surging gold and copper prices paired with a strong USD favor metal miners over margin-squeezed petrochemicals.",
+      "action": "WAIT",
+      "tag": "DOWNTREND",
+      "ma200": 2027.7955609130859,
+      "rsi": 24.379856221828742,
+      "trend": "DOWN",
+      "vol_spike": false,
+      "sl_level": 1380
+    },
+    {
+      "ticker": "TPIA.JK",
+      "price": 1720,
+      "score": 70,
+      "roe": 29.227733677673427,
+      "der": 1.4516739658401896,
+      "pbv": 39874.81210019396,
+      "is_ai": false,
+      "ai_reason": "-",
+      "sectors_available": true,
+      "sectors_error": null,
+      "sectors_score": 59.4,
+      "sectors_valuation_score": 40,
+      "sectors_growth_score": null,
+      "sectors_dividend_score": 65,
+      "sectors_ownership_score": 73.3,
+      "forward_pe": 106.966712296437,
+      "intrinsic_value": -4887,
+      "eps_growth": null,
+      "revenue_growth": null,
+      "dividend_yield": 0.5715337198131021,
+      "payout_ratio": 41.2836656068309,
+      "institutional_flow": [
+        {
+          "date": "2026-02-28",
+          "net_transaction": 196622684
+        },
+        {
+          "date": "2026-01-31",
+          "net_transaction": 30263370
+        },
+        {
+          "date": "2025-12-31",
+          "net_transaction": 16631050
+        },
+        {
+          "date": "2025-11-30",
+          "net_transaction": 19113434
+        },
+        {
+          "date": "2025-10-31",
+          "net_transaction": 2481744
+        },
+        {
+          "date": "2025-09-30",
+          "net_transaction": -5773602
+        },
+        {
+          "date": "2025-08-31",
+          "net_transaction": -1881350
+        },
+        {
+          "date": "2025-07-31",
+          "net_transaction": 1808512
+        },
+        {
+          "date": "2025-06-30",
+          "net_transaction": 14997624
+        },
+        {
+          "date": "2025-05-31",
+          "net_transaction": -15549418
+        },
+        {
+          "date": "2025-04-30",
+          "net_transaction": -9738162
+        },
+        {
+          "date": "2025-03-31",
+          "net_transaction": -10999008
+        },
+        {
+          "date": "2025-02-28",
+          "net_transaction": -7134348
+        },
+        {
+          "date": "2025-01-31",
+          "net_transaction": -7302012
+        },
+        {
+          "date": "2024-12-31",
+          "net_transaction": 34245352
+        },
+        {
+          "date": "2024-11-30",
+          "net_transaction": 51749348
+        },
+        {
+          "date": "2024-09-30",
+          "net_transaction": 71067682
+        },
+        {
+          "date": "2024-06-30",
+          "net_transaction": 223559608
+        },
+        {
+          "date": "2024-01-31",
+          "net_transaction": -21318643
+        },
+        {
+          "date": "2023-12-31",
+          "net_transaction": -21076530
+        }
+      ],
+      "whale_count": 1,
+      "conglomerate_count": 1,
+      "fundamental_consensus": "MILD DIVERGENCE",
+      "ai_insight": "Surging gold and copper prices paired with a strong USD favor metal miners over margin-squeezed petrochemicals.",
+      "action": "WAIT",
+      "tag": "DOWNTREND",
+      "ma200": 4215.74441772461,
+      "rsi": 34.06095285871694,
+      "trend": "DOWN",
+      "vol_spike": false,
+      "sl_level": 1680
+    },
+    {
+      "ticker": "INCO.JK",
+      "price": 4150,
+      "score": 65,
+      "roe": 2.7409339419893364,
+      "der": 0.001254740410713076,
+      "pbv": 15761.768620426974,
+      "is_ai": false,
+      "ai_reason": "-",
+      "sectors_available": true,
+      "sectors_error": null,
+      "sectors_score": 75,
+      "sectors_valuation_score": 55,
+      "sectors_growth_score": null,
+      "sectors_dividend_score": null,
+      "sectors_ownership_score": 95,
+      "forward_pe": 20.7462756207899,
+      "intrinsic_value": -3194,
+      "eps_growth": null,
+      "revenue_growth": null,
+      "dividend_yield": null,
+      "payout_ratio": null,
+      "institutional_flow": [
+        {
+          "date": "2026-08-31",
+          "net_transaction": 71273380
+        },
+        {
+          "date": "2026-07-31",
+          "net_transaction": -13361574
+        },
+        {
+          "date": "2026-06-30",
+          "net_transaction": -10462630
+        },
+        {
+          "date": "2026-04-30",
+          "net_transaction": -8319466
+        },
+        {
+          "date": "2026-02-28",
+          "net_transaction": 137632786
+        },
+        {
+          "date": "2026-01-31",
+          "net_transaction": -17968386
+        },
+        {
+          "date": "2025-12-31",
+          "net_transaction": -18635400
+        },
+        {
+          "date": "2025-11-30",
+          "net_transaction": -1553960
+        },
+        {
+          "date": "2025-10-31",
+          "net_transaction": 36986654
+        },
+        {
+          "date": "2025-09-30",
+          "net_transaction": -4611808
+        },
+        {
+          "date": "2025-08-31",
+          "net_transaction": 315128
+        },
+        {
+          "date": "2025-07-31",
+          "net_transaction": -491246
+        },
+        {
+          "date": "2025-06-30",
+          "net_transaction": -5351162
+        },
+        {
+          "date": "2025-05-31",
+          "net_transaction": -19531032
+        },
+        {
+          "date": "2025-04-30",
+          "net_transaction": -27669792
+        },
+        {
+          "date": "2025-03-31",
+          "net_transaction": -30229068
+        },
+        {
+          "date": "2025-02-28",
+          "net_transaction": -99058802
+        },
+        {
+          "date": "2025-01-31",
+          "net_transaction": -93548298
+        },
+        {
+          "date": "2024-12-31",
+          "net_transaction": -94134276
+        },
+        {
+          "date": "2024-11-30",
+          "net_transaction": -94012170
+        },
+        {
+          "date": "2024-09-30",
+          "net_transaction": -53926584
+        },
+        {
+          "date": "2023-12-31",
+          "net_transaction": -216435271
+        }
+      ],
+      "whale_count": null,
+      "conglomerate_count": null,
+      "fundamental_consensus": "CONFIRMED",
+      "ai_insight": "Surging gold and copper prices paired with a strong USD favor metal miners over margin-squeezed petrochemicals.",
+      "action": "WAIT",
+      "tag": "DOWNTREND",
+      "ma200": 5381.876638183594,
+      "rsi": 29.286030809337547,
+      "trend": "DOWN",
+      "vol_spike": false,
+      "sl_level": 4100
+    },
+    {
+      "ticker": "ADMG.JK",
+      "price": 224,
+      "score": 65,
+      "roe": -2.792597846455714,
+      "der": 0.0004894753697611142,
+      "pbv": 7732.551826184887,
+      "is_ai": false,
+      "ai_reason": "-",
+      "sectors_available": true,
+      "sectors_error": null,
+      "sectors_score": 62.5,
+      "sectors_valuation_score": null,
+      "sectors_growth_score": null,
+      "sectors_dividend_score": null,
+      "sectors_ownership_score": 62.5,
+      "forward_pe": null,
+      "intrinsic_value": 98,
+      "eps_growth": null,
+      "revenue_growth": null,
+      "dividend_yield": null,
+      "payout_ratio": null,
+      "institutional_flow": null,
+      "whale_count": 1,
+      "conglomerate_count": 1,
+      "fundamental_consensus": "CONFIRMED",
+      "ai_insight": "Surging gold and copper prices paired with a strong USD favor metal miners over margin-squeezed petrochemicals.",
+      "action": "BUY",
+      "tag": "ON WEAKNESS",
+      "ma200": 215.875,
+      "rsi": 30.89008949494587,
+      "trend": "UP",
+      "vol_spike": false,
+      "sl_level": 220
+    },
+    {
+      "ticker": "FPNI.JK",
+      "price": 482,
+      "score": 65,
+      "roe": 4.151046547953764,
+      "der": 0.002577319587628866,
+      "pbv": 26193.099304904714,
+      "is_ai": false,
+      "ai_reason": "-",
+      "sectors_available": true,
+      "sectors_error": null,
+      "sectors_score": 90,
+      "sectors_valuation_score": null,
+      "sectors_growth_score": null,
+      "sectors_dividend_score": null,
+      "sectors_ownership_score": 90,
+      "forward_pe": null,
+      "intrinsic_value": 331,
+      "eps_growth": null,
+      "revenue_growth": null,
+      "dividend_yield": null,
+      "payout_ratio": null,
+      "institutional_flow": [
+        {
+          "date": "2026-08-31",
+          "net_transaction": -1208400
+        },
+        {
+          "date": "2026-07-31",
+          "net_transaction": -1208400
+        },
+        {
+          "date": "2026-06-30",
+          "net_transaction": -1208400
+        },
+        {
+          "date": "2026-04-30",
+          "net_transaction": -1208400
+        },
+        {
+          "date": "2026-02-28",
+          "net_transaction": -1208400
+        },
+        {
+          "date": "2023-12-31",
+          "net_transaction": -673400
+        }
+      ],
+      "whale_count": null,
+      "conglomerate_count": null,
+      "fundamental_consensus": "DIVERGENCE",
+      "ai_insight": "Surging gold and copper prices paired with a strong USD favor metal miners over margin-squeezed petrochemicals.",
+      "action": "WAIT",
+      "tag": "DOWNTREND",
+      "ma200": 544.215,
+      "rsi": 43.101938372586396,
+      "trend": "DOWN",
+      "vol_spike": false,
+      "sl_level": 454
+    },
+    {
+      "ticker": "SULI.JK",
+      "price": 74,
+      "score": 60,
+      "roe": -27.02604347314987,
+      "der": 0.5576957610022584,
+      "pbv": 6818.049242565704,
+      "is_ai": false,
+      "ai_reason": "-",
+      "sectors_available": true,
+      "sectors_error": null,
+      "sectors_score": 67.5,
+      "sectors_valuation_score": null,
+      "sectors_growth_score": null,
+      "sectors_dividend_score": null,
+      "sectors_ownership_score": 67.5,
+      "forward_pe": null,
+      "intrinsic_value": -163,
+      "eps_growth": null,
+      "revenue_growth": null,
+      "dividend_yield": null,
+      "payout_ratio": null,
+      "institutional_flow": [
+        {
+          "date": "2024-01-31",
+          "net_transaction": -1000000
+        }
+      ],
+      "whale_count": 2,
+      "conglomerate_count": null,
+      "fundamental_consensus": "CONFIRMED",
+      "ai_insight": "Surging gold and copper prices paired with a strong USD favor metal miners over margin-squeezed petrochemicals.",
+      "action": "WAIT",
+      "tag": "DOWNTREND",
+      "ma200": 103.15,
+      "rsi": 32.569902882101914,
+      "trend": "DOWN",
+      "vol_spike": false,
+      "sl_level": 69
+    }
+  ]
+}

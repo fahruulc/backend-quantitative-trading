@@ -51,3 +51,7 @@ dump.rdb
 .claude
 
 .SectorApp
+
+# Local-only subproject & personal notes (tidak untuk dipublish)
+SectorApp/
+Pertanyaan*.txt

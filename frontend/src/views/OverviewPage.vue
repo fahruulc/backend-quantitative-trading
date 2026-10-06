@@ -63,9 +63,17 @@
 
         <!-- AI Insight Panel -->
         <div class="lg:col-span-1 bg-fincard border border-finborder rounded-xl flex flex-col overflow-hidden">
-          <div class="px-5 py-4 border-b border-finborder flex items-center gap-2">
-            <div class="w-2 h-2 rounded-full bg-finblue shadow-glow-blue"></div>
-            <h3 class="text-white font-semibold text-sm">Gemini AI Analyst</h3>
+          <div class="px-5 py-4 border-b border-finborder flex items-center justify-between gap-2">
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 rounded-full bg-finblue shadow-glow-blue"></div>
+              <h3 class="text-white font-semibold text-sm">AI Analyst</h3>
+            </div>
+            <span
+              v-if="aiModelUsed"
+              class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-finblue/10 text-finblue border border-finblue/30"
+            >
+              {{ aiModelUsed }}
+            </span>
           </div>
           <div class="p-5 flex-1 space-y-4">
             <!-- Macro Reasoning -->
@@ -195,6 +203,11 @@ const error = computed(() => marketStore.error)
 const macroData = computed(() => marketStore.macroData)
 const sectorData = computed(() => marketStore.sectorData)
 const stockSignals = computed(() => marketStore.stockSignals || [])
+const aiModelUsed = computed(() =>
+  marketStore.fullReport?.ai_model_used ||
+  marketStore.stockSignals?.find(s => s.ai_model_used)?.ai_model_used ||
+  null
+)
 
 // Load data
 const loadData = async () => {

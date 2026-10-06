@@ -1,10 +1,11 @@
 import asyncio
 import logging
-from datetime import datetime
+from datetime import datetime, timedelta
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from sqlalchemy.orm import Session
 
 from app.core.database import SessionLocal
+from app.models.stock_fundamental import StockFundamental
 from app.services.cache_manager import cache_manager
 from app.utils.sectors_client import AsyncSectorsClient
 
@@ -36,10 +37,26 @@ async def prefetch_top_stocks():
 
     success_count = 0
     error_count = 0
+    skipped_count = 0
+
+    # STRICT LIMIT: maksimal 1x fetch per saham per hari.
+    # Kalau data hari ini sudah ada di DB (last_updated >= 00:00 hari ini),
+    # skip → 0 token. Tanpa perlu kolom/migrasi DB baru.
+    today_start = datetime.utcnow().replace(hour=0, minute=0, second=0, microsecond=0)
 
     try:
         for ticker in PRIORITY_STOCKS:
             try:
+                # Skip kalau sudah fresh hari ini
+                fresh = db.query(StockFundamental).filter(
+                    StockFundamental.ticker == ticker,
+                    StockFundamental.last_updated >= today_start
+                ).first()
+                if fresh:
+                    skipped_count += 1
+                    logger.info(f"⏭️  Skip {ticker} — already fetched today (0 tokens)")
+                    continue
+
                 await cache_manager.get_stock_fundamental(
                     ticker=ticker,
                     db=db,
@@ -63,13 +80,28 @@ async def prefetch_top_stocks():
 
         logger.info(f"""
         ✅ Pre-fetch job completed in {elapsed:.1f}s
-        - Success: {success_count}/{len(PRIORITY_STOCKS)}
+        - Fetched: {success_count}/{len(PRIORITY_STOCKS)}
+        - Skipped (already fresh today): {skipped_count}
         - Errors: {error_count}
         - Estimated tokens used: {success_count * 8}
         - Total tokens used so far: {token_summary['total_used']}/{token_summary['budget']}
         - Remaining: {token_summary['remaining']} tokens
         - Alert level: {token_summary['alert']}
         """)
+
+        # Morning brief Telegram — kirim 1x setelah prefetch selesai.
+        # Data dibaca dari DB (BUKAN panggil API lagi). Kalau token Telegram
+        # belum diisi / DB kosong → skip dengan aman.
+        try:
+            from app.services.telegram_service import send_message, build_morning_brief
+            brief = build_morning_brief(db)
+            if brief:
+                await send_message(brief)
+                logger.info("📨 Morning brief sent to Telegram")
+            else:
+                logger.info("📨 Morning brief skipped (no data in DB)")
+        except Exception as e:
+            logger.warning(f"📨 Telegram brief not sent: {e}")
 
     except Exception as e:
         logger.error(f"Pre-fetch job failed: {e}")

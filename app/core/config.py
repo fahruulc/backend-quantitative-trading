@@ -26,6 +26,10 @@ class Settings(BaseSettings):
     AI_MODELS: str = "qwen3.8-max,minimax-m3-pay,kimi-k3,mimo-v2.5,mimo-v2.6-flash,deepseek-v4.1,minimax-m3,claude-sonnet-5"
     AI_MAX_RETRIES: int = 3
 
+    # Telegram (opsional — kosongkan untuk menonaktifkan morning brief)
+    TELEGRAM_BOT_TOKEN: str = ""
+    TELEGRAM_CHAT_ID: str = ""
+
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
 
 @lru_cache()
