@@ -33,6 +33,18 @@ class AsyncGeminiAnalyst:
         return cleaned.strip()
 
     async def analyze_context(self, macro: dict, sector: str, candidates: list):
+        # Demo mode: Return mock data without consuming tokens
+        if settings.DEMO_MODE and settings.USE_MOCK_DATA:
+            print("🎭 DEMO MODE: Using mock Gemini response (no tokens used)")
+            return {
+                "insight": "[MOCK] Demo mode active - Strong commodity prices favor exporters in selected sector",
+                "picks": candidates[:2] if len(candidates) >= 2 else candidates,
+                "rationale": {
+                    candidates[0]: "Mock reason 1" if len(candidates) > 0 else "",
+                    candidates[1]: "Mock reason 2" if len(candidates) > 1 else ""
+                }
+            }
+
         if not self.model:
             return {"insight": "AI Error: Model failed to initialize. Check API Key.", "picks": [], "rationale": {}}
 

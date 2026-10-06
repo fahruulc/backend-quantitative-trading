@@ -49,3 +49,5 @@ dump.rdb
 
 # Claude configuration 
 .claude
+
+.SectorApp

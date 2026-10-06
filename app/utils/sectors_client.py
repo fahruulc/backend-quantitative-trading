@@ -125,6 +125,20 @@ class AsyncSectorsClient:
         return round(sum(points) / len(points), 1) if points else None
 
     async def analyze(self, ticker: str):
+        # Demo mode: Return mock data without consuming tokens
+        if settings.DEMO_MODE and settings.USE_MOCK_DATA:
+            print(f"🎭 DEMO MODE: Using mock Sectors data for {ticker} (no tokens used)")
+            return {
+                "sectors_available": True, "sectors_error": None, "sectors_score": 75.0,
+                "valuation_score": 80.0, "growth_score": 70.0,
+                "dividend_score": 65.0, "ownership_score": 72.0,
+                "forward_pe": 12.5, "intrinsic_value": 3500.0,
+                "eps_growth": 15.5, "revenue_growth": 12.3,
+                "dividend_yield": 4.2, "payout_ratio": 55.0,
+                "institutional_flow": "positive", "whale_count": 3,
+                "conglomerate_count": 2,
+            }
+
         data, error = await self.get_report(ticker)
         if not data:
             return {
